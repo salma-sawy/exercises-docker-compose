@@ -1,0 +1,9 @@
+services:
+  frontend:
+    image: salmasawy/devops-with-docker-frontend
+    ports:
+      - 5001:5001
+  backend:
+    image: salmasawy/devops-with-docker-backend
+    ports:
+      - 8080:8080
