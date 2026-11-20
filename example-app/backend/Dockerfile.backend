@@ -1,0 +1,15 @@
+FROM golang:1.16
+
+WORKDIR /go-app
+
+COPY . .
+
+RUN go build
+
+ENV PORT=8080
+
+EXPOSE $PORT
+
+ENV REQUEST_ORIGIN=http://localhost:5001
+
+CMD ["./server"]
